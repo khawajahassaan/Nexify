@@ -1,0 +1,200 @@
+.contact-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.contact-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(-45deg, #f3f0ff, #e1f5ee, #e6f1fb, #fce0ea);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+.left-content {
+    max-width: 500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.company-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 700;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.testimonial-text {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #111827;
+    line-height: 1.4;
+}
+
+.profiles-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.profile.faded {
+    opacity: 0.5;
+    transform: scale(0.9);
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile .name { font-size: 0.85rem; font-weight: 600; color: #111827; }
+.profile .title { font-size: 0.75rem; color: #6b7280; }
+
+.pfp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    color: #111827;
+}
+
+
+.contact-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+    background-color: #f9f9fb;
+}
+
+.right-content {
+    max-width: 450px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.support-label {
+    color: #10b981;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.contact-heading {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.5rem;
+}
+
+.contact-subtitle {
+    color: #6b7280;
+    font-size: 0.95rem;
+    margin-bottom: 2.5rem;
+}
+
+
+.contact-card {
+    background: white;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    text-align: left;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+}
+
+.card-header a {
+    color: #4b5563;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+.input-group input, .input-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    background-color: #f9fafb;
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.input-group input:focus, .input-group textarea:focus {
+    outline: none;
+    border-color: #5b4fcf;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(91, 79, 207, 0.1);
+}
+
+.form-submit {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem;
+}
+
+@media (max-width: 992px) {
+    .contact-wrapper {
+        flex-direction: column;
+    }
+    .contact-left, .contact-right {
+        padding: 3rem 1.5rem;
+    }
+}
