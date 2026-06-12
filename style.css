@@ -79,7 +79,32 @@
     padding: 40px 20px;
     margin:0 auto;
     border-bottom: 1px solid #e5e7eb;
+    background: linear-gradient(-45deg, #ffffff, #f3f0ff, #e6f9f0, #e0f2fe);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
 }
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.dot {
+    animation: float 3s ease-in-out infinite;
+}
+
+.dot-green { animation-delay: 0s; }
+.dot-red { animation-delay: 0.2s; }
+.dot-orange { animation-delay: 0.4s; }
+.dot-blue { animation-delay: 0.6s; }
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+
 
 .badges-row {
   display: flex;
@@ -134,6 +159,13 @@
 
 .cursor {
   color: #5b4fcf;
+  display: inline-block;
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
 
 .hero-subtitle {
@@ -189,6 +221,18 @@
   border: 1px solid #d1d5db; 
 }
 .btn-outline:hover { background: #f3f4f6; }
+
+.stat-card, .metric-card, .item-card, .review-box, .price-box {
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
+    will-change: transform; 
+}
+
+.stat-card:hover, .metric-card:hover, .item-card:hover, .review-box:hover, .price-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+
 
 .stats-row {
   display: flex;
@@ -569,6 +613,13 @@
     justify-content: center;
 }
 
+.starter-box:hover {
+    border: 2px solid #085041;
+}
+
+.enterprise-box:hover {
+    border: 2px solid #712b13;
+}
 
 .prices{
     margin-bottom: 1rem;
@@ -768,4 +819,37 @@ footer{
 
     border: 1.2px solid #f0f0f0;
     border-radius: 10px;
+}
+
+.btn, .btn-get, .subbtn, .buy {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.btn:hover, .btn-get:hover, .subbtn:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn:active, .btn-get:active, .subbtn:active, .buy:active {
+    transform: translateY(1px) scale(0.98);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links a {
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #5b4fcf;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
 }
